@@ -1,0 +1,103 @@
+<html>
+</head>
+<script type='text/javascript' src='http://code.jquery.com/jquery-1.6.3.js'></script>
+<script type='text/javascript' src='kantan-scroll.js'></script>
+<script type='text/javascript'>
+$(function() {
+	$("#my_scroller").kantan_scroll({
+        duration: 3000,
+        ideal_width: 200,
+        ideal_height: 190,
+        hover_stop: true
+    });
+
+    $("#stop").click(function() {
+        $("#my_scroller").stop_kantan_scroll();
+    });
+
+    $("#go").click(function() {
+        $("#my_scroller").continue_kantan_scroll();
+    });
+});
+</script>
+</head>
+<body>
+<h1>Kantan Scroller Example jQuery Plugin</h1>
+<div>
+<p>This is a really basic scroller plugin for jQuery. <br/>You just need a div (which you can style and position anyway you want) which contains an unordered list. <br/>The list items can be anything, but they will get cropped into the size of <i>ideal_height</i> by <i>ideal_width</i></p>
+<p>The code for this scroller looks like this:</p>
+<pre>
+$("#my_scroller").kantan_scroll({
+    duration: 3000,
+    ideal_width: 200,
+    ideal_height: 190,
+    hover_stop: true
+});
+</pre>
+
+</div>
+<div id="my_scroller">
+	<ul>
+        <li>
+            <div style="background: #fcc; padding: 20px;">hello this box contains text and not images like the rest, but it still works pretty well.</div>
+        </li>
+        <li>
+            <a href=""><img src="http://www.cooking-store.co.uk/wp-content/uploads/2011/04/Rainbow-cupcakes-150x150.jpg" /></a>
+        </li>
+        <li>
+            <a href=""><img src="http://www.trilogylifeblog.com/wp-content/uploads/2011/04/PacosTacos-Taco-150x150.jpg" /></a>
+        </li>
+        <li>
+            <a href=""><img src="http://www.gamerbullet.com/wp-content/uploads/2011/08/nyan_cat.gif" /></a>
+        </li>
+        <li>
+            <a href=""><img src="http://www.all-pet-birds.com/image-files/parrotlet_yellow-faced.jpg" /></a>
+        </li>
+        <li>
+            <a href=""><img src="http://www.snowboardtracks.com/wp-content/uploads/2008/08/snowboarders-at-timberline-150x150.jpg" /></a>
+        </li>
+        <li>
+            <a href=""><img src="http://www.cooking-store.co.uk/wp-content/uploads/2011/04/Rainbow-cupcakes-150x150.jpg" /></a>
+        </li>
+        <li>
+            <a href=""><img src="http://www.gamerbullet.com/wp-content/uploads/2011/08/nyan_cat.gif" /></a>
+        </li>      
+        <li>
+            <a href=""><img src="http://www.cooking-store.co.uk/wp-content/uploads/2011/04/Rainbow-cupcakes-150x150.jpg" /></a>
+        </li>
+        <li>
+            <a href=""><img src="http://www.all-pet-birds.com/image-files/parrotlet_yellow-faced.jpg" /></a>
+        </li>
+        <li>
+            <a href=""><img src="http://www.snowboardtracks.com/wp-content/uploads/2008/08/snowboarders-at-timberline-150x150.jpg" /></a>
+        </li>
+        <li>
+            <a href=""><img src="http://www.cooking-store.co.uk/wp-content/uploads/2011/04/Rainbow-cupcakes-150x150.jpg" /></a>
+        </li>
+        <li>
+            <a href=""><img src="http://www.gamerbullet.com/wp-content/uploads/2011/08/nyan_cat.gif" /></a>
+        </li>      
+        <li>
+            <a href=""><img src="http://www.all-pet-birds.com/image-files/parrotlet_yellow-faced.jpg" /></a>
+        </li>
+        
+        <li>
+            <a href=""><img src="http://www.cooking-store.co.uk/wp-content/uploads/2011/04/Rainbow-cupcakes-150x150.jpg" /></a>
+        </ul>
+</div>
+<div>
+	<p>By default it will stop on hover. But you can also stop and start it using functions, like this:</p>
+<pre>
+$("#stop").click(function() {
+    $("#my_scroller").stop_kantan_scroll();
+});
+$("#go").click(function() {
+    $("#my_scroller").continue_kantan_scroll();
+});
+</pre>
+	<input type="button" id="stop" value="stop" />
+    <input type="button" id="go" value="go" />
+</div>
+
+</body>
+</html>
